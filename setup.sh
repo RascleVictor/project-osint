@@ -254,6 +254,31 @@ install_gumshoe() {
     fi
 }
 
+install_mailogleit() {
+    echo "⏳ Installation de mailogleit..."
+    if command_exists mailogleit; then
+        echo "✅ mailogleit est déjà installé."
+    else
+        sudo apt install -y git
+        if [ -d "mailogleit" ]; then
+            echo "⚠️ Le dossier 'mailogleit' existe déjà, mise à jour..."
+            cd mailogleit || exit 1
+            git pull
+        else
+            git clone https://github.com/dincertekin/mailogleit.git
+            cd mailogleit || exit 1
+        fi
+        pip install -r requirements.txt
+        cd ..
+        if command_exists mailogleit; then
+            echo "✅ mailogleit installé avec succès."
+        else
+            echo "❌ Échec de l'installation de mailogleit."
+            exit 1
+        fi
+    fi
+}
+
 install_pip
 install_pipx
 install_holehe
@@ -265,3 +290,4 @@ install_zehef
 install_email_osint
 install_blackbird
 install_gumshoe
+install_mailogleit
