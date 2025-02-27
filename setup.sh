@@ -104,8 +104,60 @@ install_h8mail() {
     fi
 }
 
+install_eyes() {
+    echo "⏳ Installation de Eyes..."
+    if command_exists eyes; then
+        echo "✅ Eyes est déjà installé."
+    else
+        sudo apt install -y git
+        if [ -d "Eyes" ]; then
+            echo "⚠️ Le dossier 'Eyes' existe déjà, mise à jour..."
+            cd Eyes || exit 1
+            git pull
+        else
+            git clone https://github.com/N0rz3/Eyes.git
+            cd Eyes || exit 1
+        fi
+        pip3 install -r requirements.txt
+        cd ..
+        if command_exists eyes; then
+            echo "✅ Eyes installé avec succès."
+        else
+            echo "❌ Échec de l'installation de Eyes."
+            exit 1
+        fi
+    fi
+}
+
+install_zehef() {
+    echo "⏳ Installation de Zehef..."
+    if command_exists zehef; then
+        echo "✅ Zehef est déjà installé."
+    else
+        sudo apt install -y git
+        if [ -d "Zehef" ]; then
+            echo "⚠️ Le dossier 'Zehef' existe déjà, mise à jour..."
+            cd Zehef || exit 1
+            git pull
+        else
+            git clone https://github.com/N0rz3/Zehef.git
+            cd Zehef || exit 1
+        fi
+        pip3 install -r requirements.txt
+        cd ..
+        if command_exists zehef; then
+            echo "✅ Zehef installé avec succès."
+        else
+            echo "❌ Échec de l'installation de Zehef."
+            exit 1
+        fi
+    fi
+}
+
 install_pip
 install_pipx
 install_holehe
 install_hawker
 install_h8mail
+install_eyes
+install_zehef
