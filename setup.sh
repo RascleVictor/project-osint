@@ -89,6 +89,31 @@ install_hawker() {
     fi
 }
 
+install_buster() {
+    echo "⏳ Installation de buster..."
+    if command_exists buster; then
+        echo "✅ buster est déjà installé."
+    else
+        sudo apt install -y git
+        if [ -d "buster" ]; then
+            echo "⚠️ Le dossier 'buster' existe déjà, mise à jour..."
+            cd buster || exit 1
+            git pull
+        else
+            git clone git://github.com/sham00n/buster
+            cd buster || exit 1
+        fi
+        python3 setup.py install
+        cd ..
+        if command_exists buster; then
+            echo "✅ buster installé avec succès."
+        else
+            echo "❌ Échec de l'installation de buster."
+            exit 1
+        fi
+    fi
+}
+
 install_h8mail() {
     echo "⏳ Installation de h8mail..."
     if command_exists h8mail; then
@@ -204,12 +229,39 @@ install_blackbird() {
     fi
 }
 
+install_gumshoe() {
+    echo "⏳ Installation de gumshoe..."
+    if command_exists gumshoe; then
+        echo "✅ gumshoe est déjà installé."
+    else
+        sudo apt install -y git
+        if [ -d "gumshoe" ]; then
+            echo "⚠️ Le dossier 'gumshoe' existe déjà, mise à jour..."
+            cd gumshoe || exit 1
+            git pull
+        else
+            git clone https://github.com/asharbinkhalil/gumshoe.git
+            cd gumshoe || exit 1
+        fi
+        pip install -r requirements.txt
+        cd ..
+        if command_exists gumshoe; then
+            echo "✅ gumshoe installé avec succès."
+        else
+            echo "❌ Échec de l'installation de gumshoe."
+            exit 1
+        fi
+    fi
+}
+
 install_pip
 install_pipx
 install_holehe
 install_hawker
+install_buster
 install_h8mail
 install_eyes
 install_zehef
 install_email_osint
 install_blackbird
+install_gumshoe
