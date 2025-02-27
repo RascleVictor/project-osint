@@ -154,6 +154,56 @@ install_zehef() {
     fi
 }
 
+install_email_osint() {
+    echo "⏳ Installation de Email-Osint..."
+    if command_exists email-osint; then
+        echo "✅ Email-Osint est déjà installé."
+    else
+        sudo apt install -y git
+        if [ -d "Email-Osint" ]; then
+            echo "⚠️ Le dossier 'Email-Osint' existe déjà, mise à jour..."
+            cd Email-Osint || exit 1
+            git pull
+        else
+            git clone https://github.com/KanekiX2/Email-Osint.git
+            cd Email-Osint || exit 1
+        fi
+        pip3 install -r requirements.txt
+        cd ..
+        if command_exists email-osint; then
+            echo "✅ Email-Osint installé avec succès."
+        else
+            echo "❌ Échec de l'installation de Email-Osint."
+            exit 1
+        fi
+    fi
+}
+
+install_blackbird() {
+    echo "⏳ Installation de blackbird..."
+    if command_exists blackbird; then
+        echo "✅ blackbird est déjà installé."
+    else
+        sudo apt install -y git
+        if [ -d "blackbird" ]; then
+            echo "⚠️ Le dossier 'blackbird' existe déjà, mise à jour..."
+            cd blackbird || exit 1
+            git pull
+        else
+            git clone https://github.com/p1ngul1n0/blackbird
+            cd blackbird || exit 1
+        fi
+        pip install -r requirements.txt
+        cd ..
+        if command_exists blackbird; then
+            echo "✅ blackbird installé avec succès."
+        else
+            echo "❌ Échec de l'installation de blackbird."
+            exit 1
+        fi
+    fi
+}
+
 install_pip
 install_pipx
 install_holehe
@@ -161,3 +211,5 @@ install_hawker
 install_h8mail
 install_eyes
 install_zehef
+install_email_osint
+install_blackbird
