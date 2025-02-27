@@ -279,6 +279,56 @@ install_mailogleit() {
     fi
 }
 
+install_profil3r() {
+    echo "⏳ Installation de Profil3r..."
+    if command_exists Profil3r; then
+        echo "✅ Profil3r est déjà installé."
+    else
+        sudo apt install -y git
+        if [ -d "Profil3r" ]; then
+            echo "⚠️ Le dossier 'Profil3r' existe déjà, mise à jour..."
+            cd Profil3r || exit 1
+            git pull
+        else
+            git clone https://github.com/Rog3rSm1th/Profil3r.git
+            cd Profil3r || exit 1
+        fi
+        pip3 install -r requirements.txt
+        sudo python3 setup.py install
+        cd ..
+        if command_exists Profil3r; then
+            echo "✅ Profil3r installé avec succès."
+        else
+            echo "❌ Échec de l'installation de Profil3r."
+            exit 1
+        fi
+    fi
+}
+
+install_dependencies() {
+    echo "⏳ Installation des dépendances Python..."
+    pip3 install PyInquirer jinja2 bs4
+}
+
+install_philint() {
+    echo "⏳ Installation de philINT..."
+    if command_exists philINT; then
+        echo "✅ philINT est déjà installé."
+    else
+        sudo apt install -y git
+        git clone https://github.com/ajuelosemmanuel/philINT.git
+        cd philINT || exit 1
+        python3 setup.py install
+        cd ..
+        if command_exists philINT; then
+            echo "✅ philINT installé avec succès."
+        else
+            echo "❌ Échec de l'installation de philINT."
+            exit 1
+        fi
+    fi
+}
+
 install_pip
 install_pipx
 install_holehe
@@ -291,3 +341,6 @@ install_email_osint
 install_blackbird
 install_gumshoe
 install_mailogleit
+install_dependencies
+install_profil3r
+install_philint
