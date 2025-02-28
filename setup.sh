@@ -29,7 +29,7 @@ install_pipx() {
         echo "✅ pipx est déjà installé : $(pipx --version)"
     else
         echo "⚠️ pipx n'est pas installé. Installation en cours..."
-        sudo apt install -y python3-pipx
+        sudo apt install pipx
         if command_exists pipx; then
             echo "✅ pipx installé avec succès : $(pipx --version)"
         else
@@ -42,21 +42,12 @@ install_pipx() {
 install_holehe() {
     echo "⏳ Installation de holehe..."
     if command_exists holehe; then
-        echo "✅ holehe est déjà installé."
+        echo "✅ holehe est déjà installé : $(holehe --version 2>/dev/null || echo 'Version inconnue')"
     else
-        sudo apt install -y git
-        if [ -d "holehe" ]; then
-            echo "⚠️ Le dossier 'holehe' existe déjà, mise à jour..."
-            cd holehe || exit 1
-            git pull
-        else
-            git clone https://github.com/megadose/holehe.git
-            cd holehe || exit 1
-        fi
-        python3 setup.py install
-        cd ..
+        echo "⚠️ holehe n'est pas installé. Installation en cours..."
+        pip3 install holehe
         if command_exists holehe; then
-            echo "✅ holehe installé avec succès."
+            echo "✅ holehe installé avec succès : $(holehe --version 2>/dev/null || echo 'Version inconnue')"
         else
             echo "❌ Échec de l'installation de holehe."
             exit 1
