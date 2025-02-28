@@ -2,10 +2,8 @@
 
 echo "🚀 Exécution des outils installés pour une enquête sur une adresse e-mail..."
 
-# Demande à l'utilisateur de saisir un email
 read -p "📩 Entrez l'adresse e-mail cible : " EMAIL
 
-# Vérifie si l'entrée est valide
 if [[ ! "$EMAIL" =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]; then
     echo "❌ Adresse e-mail invalide. Veuillez entrer un e-mail valide."
     exit 1
@@ -29,7 +27,6 @@ run_tool() {
     echo "-------------------------------------------"
 }
 
-# Liste des outils avec leur commande
 run_tool "Holehe" "holehe" "holehe $EMAIL"
 run_tool "Profil3r" "Profil3r" "Profil3r -p email -v $EMAIL"
 run_tool "philINT" "philINT" "philINT -e $EMAIL"
