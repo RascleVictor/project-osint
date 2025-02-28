@@ -76,11 +76,7 @@ install_holehe() {
 #         sudo git clone https://github.com/RetrO-M/Hawker.git
 #            cd Hawker || exit 1
 #        fi
-#        sudo pip3 install cryptography
-#        sudo    pip3 install colorama
-#        sudo     pip3 install requests
-#        sudo     pip3 install beautifulsoup4
-#        sudo     pip3 install lxml
+#       sudo python3 -m pip install -r requirements.txt
 #        cd ..
 #        if command_exists hawker; then
 #            echo "✅ Hawker installé avec succès."
@@ -125,7 +121,7 @@ install_h8mail() {
                 cd h8mail || exit 1
                 git pull
             else
-              sudo https://github.com/khast3x/h8mail.git
+              sudo git clone https://github.com/khast3x/h8mail.git
                 cd h8mail|| exit 1
             fi
             sudo python3 setup.py install
@@ -149,10 +145,10 @@ install_eyes() {
             cd Eyes || exit 1
             git pull
         else
-         sudo  git clone https://github.com/N0rz3/Eyes.git
-            cd Eyes || exit 1
+         sudo git clone https://github.com/N0rz3/Eyes.git
+            cd ./Eyes || exit 1
         fi
-        sudo pip3 install -r requirements.txt
+        sudo python3 -m pip install -r requirements.txt
         cd ..
         if command_exists eyes; then
             echo "✅ Eyes installé avec succès."
@@ -176,7 +172,7 @@ install_zehef() {
            sudo git clone https://github.com/N0rz3/Zehef.git
             cd Zehef || exit 1
         fi
-        sudo pip3 install -r requirements.txt
+        sudo python3 -m pip install -r requirements.txt
         cd ..
         if command_exists zehef; then
             echo "✅ Zehef installé avec succès."
@@ -200,7 +196,7 @@ install_email_osint() {
             git clone https://github.com/KanekiX2/Email-Osint.git
             cd Email-Osint || exit 1
         fi
-        sudo pip3 install -r requirements.txt
+        sudo python3 -m pip install -r requirements.txt
         cd ..
         if command_exists email-osint; then
             echo "✅ Email-Osint installé avec succès."
@@ -318,7 +314,6 @@ install_philint() {
     if command_exists philINT; then
         echo "✅ philINT est déjà installé."
     else
-        sudo apt install -y git
         git clone https://github.com/ajuelosemmanuel/philINT.git
         cd philINT || exit 1
         python3 setup.py install
@@ -335,8 +330,8 @@ install_philint() {
 install_pip
 install_pipx
 install_holehe
-install_hawker
-install_buster
+#install_hawker
+#install_buster
 install_h8mail
 install_eyes
 install_zehef
