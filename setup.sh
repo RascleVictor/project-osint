@@ -78,7 +78,7 @@ install_hawker() {
             git clone https://github.com/RetrO-M/Hawker.git
             cd Hawker || exit 1
         fi
-        pip install -r requirements.txt
+        sudo pip install -r requirements.txt
         cd ..
         if command_exists hawker; then
             echo "✅ Hawker installé avec succès."
@@ -103,7 +103,7 @@ install_buster() {
             git clone git://github.com/sham00n/buster
             cd buster || exit 1
         fi
-        python3 setup.py install
+        sudo python3 setup.py install
         cd ..
         if command_exists buster; then
             echo "✅ buster installé avec succès."
@@ -143,7 +143,7 @@ install_eyes() {
             git clone https://github.com/N0rz3/Eyes.git
             cd Eyes || exit 1
         fi
-        pip3 install -r requirements.txt
+        sudo pip3 install -r requirements.txt
         cd ..
         if command_exists eyes; then
             echo "✅ Eyes installé avec succès."
@@ -168,7 +168,7 @@ install_zehef() {
             git clone https://github.com/N0rz3/Zehef.git
             cd Zehef || exit 1
         fi
-        pip3 install -r requirements.txt
+        sudo pip3 install -r requirements.txt
         cd ..
         if command_exists zehef; then
             echo "✅ Zehef installé avec succès."
@@ -193,7 +193,7 @@ install_email_osint() {
             git clone https://github.com/KanekiX2/Email-Osint.git
             cd Email-Osint || exit 1
         fi
-        pip3 install -r requirements.txt
+        sudo pip3 install -r requirements.txt
         cd ..
         if command_exists email-osint; then
             echo "✅ Email-Osint installé avec succès."
@@ -218,7 +218,7 @@ install_blackbird() {
             git clone https://github.com/p1ngul1n0/blackbird
             cd blackbird || exit 1
         fi
-        pip install -r requirements.txt
+        sudo pip install -r requirements.txt
         cd ..
         if command_exists blackbird; then
             echo "✅ blackbird installé avec succès."
@@ -243,7 +243,7 @@ install_gumshoe() {
             git clone https://github.com/asharbinkhalil/gumshoe.git
             cd gumshoe || exit 1
         fi
-        pip install -r requirements.txt
+        sudo pip install -r requirements.txt
         cd ..
         if command_exists gumshoe; then
             echo "✅ gumshoe installé avec succès."
@@ -268,7 +268,7 @@ install_mailogleit() {
             git clone https://github.com/dincertekin/mailogleit.git
             cd mailogleit || exit 1
         fi
-        pip install -r requirements.txt
+        sudo pip install -r requirements.txt
         cd ..
         if command_exists mailogleit; then
             echo "✅ mailogleit installé avec succès."
@@ -293,7 +293,7 @@ install_profil3r() {
             git clone https://github.com/Rog3rSm1th/Profil3r.git
             cd Profil3r || exit 1
         fi
-        pip3 install -r requirements.txt
+        sudo pip3 install -r requirements.txt
         sudo python3 setup.py install
         cd ..
         if command_exists Profil3r; then
@@ -307,7 +307,7 @@ install_profil3r() {
 
 install_dependencies() {
     echo "⏳ Installation des dépendances Python..."
-    pip3 install PyInquirer jinja2 bs4
+    sudo pip3 install PyInquirer jinja2 bs4
 }
 
 install_philint() {
