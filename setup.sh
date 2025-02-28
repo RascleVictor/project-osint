@@ -117,12 +117,12 @@ install_holehe() {
 
 install_h8mail() {
       echo "⏳ Installation de h8mail..."
-        if command_exists holehe; then
+        if command_exists h8mail; then
             echo "✅ holehe est déjà installé."
         else
             if [ -d "holehe" ]; then
                 echo "⚠️ Le dossier 'h8mail' existe déjà, mise à jour..."
-                cd holehe || exit 1
+                cd h8mail || exit 1
                 git pull
             else
               sudo https://github.com/khast3x/h8mail.git
@@ -130,7 +130,7 @@ install_h8mail() {
             fi
             sudo python3 setup.py install
             cd ..
-            if command_exists holehe; then
+            if command_exists h8mail; then
                 echo "✅ h8mail installé avec succès."
             else
                 echo "❌ Échec de l'installation de 8mail."
