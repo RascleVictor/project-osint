@@ -63,71 +63,80 @@ install_holehe() {
     fi
 }
 
-install_hawker() {
-    echo "⏳ Installation de Hawker..."
-    if command_exists hawker; then
-        echo "✅ Hawker est déjà installé."
-    else
-        if [ -d "Hawker" ]; then
-            echo "⚠️ Le dossier 'Hawker' existe déjà, mise à jour..."
-            cd Hawker
-            git pull
-        else
-         sudo git clone https://github.com/RetrO-M/Hawker.git
-            cd Hawker || exit 1
-        fi
-        sudo pip3 install cryptography
-        sudo    pip3 install colorama
-        sudo     pip3 install requests
-        sudo     pip3 install beautifulsoup4
-        sudo     pip3 install lxml
-        cd ..
-        if command_exists hawker; then
-            echo "✅ Hawker installé avec succès."
-        else
-            echo "❌ Échec de l'installation de Hawker."
-            exit 1
-        fi
-    fi
-}
+#install_hawker() {
+#    echo "⏳ Installation de Hawker..."
+#    if command_exists hawker; then
+#        echo "✅ Hawker est déjà installé."
+#    else
+#        if [ -d "Hawker" ]; then
+#            echo "⚠️ Le dossier 'Hawker' existe déjà, mise à jour..."
+#            cd Hawker
+#            git pull
+#        else
+#         sudo git clone https://github.com/RetrO-M/Hawker.git
+#            cd Hawker || exit 1
+#        fi
+#        sudo pip3 install cryptography
+#        sudo    pip3 install colorama
+#        sudo     pip3 install requests
+#        sudo     pip3 install beautifulsoup4
+#        sudo     pip3 install lxml
+#        cd ..
+#        if command_exists hawker; then
+#            echo "✅ Hawker installé avec succès."
+#        else
+#            echo "❌ Échec de l'installation de Hawker."
+#            exit 1
+#        fi
+#    fi
+#}
 
-install_buster() {
-    echo "⏳ Installation de buster..."
-    if command_exists buster; then
-        echo "✅ buster est déjà installé."
-    else
-        if [ -d "buster" ]; then
-            echo "⚠️ Le dossier 'buster' existe déjà, mise à jour..."
-            cd buster || exit 1
-            git pull
-        else
-           sudo git clone git://github.com/sham00n/buster
-            cd buster || exit 1
-        fi
-        sudo python3 setup.py install
-        cd ..
-        if command_exists buster; then
-            echo "✅ buster installé avec succès."
-        else
-            echo "❌ Échec de l'installation de buster."
-            exit 1
-        fi
-    fi
-}
+#install_buster() {
+#    echo "⏳ Installation de buster..."
+#    if command_exists buster; then
+#        echo "✅ buster est déjà installé."
+#    else
+#        if [ -d "buster" ]; then
+#            echo "⚠️ Le dossier 'buster' existe déjà, mise à jour..."
+#            cd buster || exit 1
+#            git pull
+#        else
+#           sudo git clone https://github.com/sham00n/buster.git
+#            cd buster || exit 1
+#        fi
+#        sudo python3 setup.py install
+#        cd ..
+#        if command_exists buster; then
+#            echo "✅ buster installé avec succès."
+#        else
+#            echo "❌ Échec de l'installation de buster."
+#            exit 1
+#        fi
+#    fi
+#}
 
 install_h8mail() {
-    echo "⏳ Installation de h8mail..."
-    if command_exists h8mail; then
-        echo "✅ h8mail est déjà installé."
-    else
-        pip3 install h8mail
-        if command_exists h8mail; then
-            echo "✅ h8mail installé avec succès."
+      echo "⏳ Installation de h8mail..."
+        if command_exists holehe; then
+            echo "✅ holehe est déjà installé."
         else
-            echo "❌ Échec de l'installation de h8mail."
-            exit 1
+            if [ -d "holehe" ]; then
+                echo "⚠️ Le dossier 'h8mail' existe déjà, mise à jour..."
+                cd holehe || exit 1
+                git pull
+            else
+              sudo https://github.com/khast3x/h8mail.git
+                cd h8mail|| exit 1
+            fi
+            sudo python3 setup.py install
+            cd ..
+            if command_exists holehe; then
+                echo "✅ h8mail installé avec succès."
+            else
+                echo "❌ Échec de l'installation de 8mail."
+                exit 1
+            fi
         fi
-    fi
 }
 
 install_eyes() {
