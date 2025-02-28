@@ -50,7 +50,7 @@ install_holehe() {
             cd holehe || exit 1
             git pull
         else
-            git clone https://github.com/megadose/holehe.git
+          sudo git clone https://github.com/megadose/holehe.git
             cd holehe || exit 1
         fi
         sudo python3 setup.py install
@@ -75,10 +75,14 @@ install_hawker() {
             cd Hawker || exit 1
             git pull
         else
-            git clone https://github.com/RetrO-M/Hawker.git
+         sudo git clone https://github.com/RetrO-M/Hawker.git
             cd Hawker || exit 1
         fi
-        sudo pip3 install -r requirements.txt
+        sudo pip3 install cryptography
+        sudo    pip3 install colorama
+        sudo     pip3 install requests
+        sudo     pip3 install beautifulsoup4
+        sudo     pip3 install lxml
         cd ..
         if command_exists hawker; then
             echo "✅ Hawker installé avec succès."
@@ -100,7 +104,7 @@ install_buster() {
             cd buster || exit 1
             git pull
         else
-            git clone git://github.com/sham00n/buster
+           sudo git clone git://github.com/sham00n/buster
             cd buster || exit 1
         fi
         sudo python3 setup.py install
@@ -140,7 +144,7 @@ install_eyes() {
             cd Eyes || exit 1
             git pull
         else
-            git clone https://github.com/N0rz3/Eyes.git
+         sudo  git clone https://github.com/N0rz3/Eyes.git
             cd Eyes || exit 1
         fi
         sudo pip3 install -r requirements.txt
@@ -165,7 +169,7 @@ install_zehef() {
             cd Zehef || exit 1
             git pull
         else
-            git clone https://github.com/N0rz3/Zehef.git
+           sudo git clone https://github.com/N0rz3/Zehef.git
             cd Zehef || exit 1
         fi
         sudo pip3 install -r requirements.txt
