@@ -78,7 +78,7 @@ install_hawker() {
             git clone https://github.com/RetrO-M/Hawker.git
             cd Hawker || exit 1
         fi
-        sudo pip install -r requirements.txt
+        sudo pip3 install -r requirements.txt
         cd ..
         if command_exists hawker; then
             echo "✅ Hawker installé avec succès."
@@ -218,7 +218,7 @@ install_blackbird() {
             git clone https://github.com/p1ngul1n0/blackbird
             cd blackbird || exit 1
         fi
-        sudo pip install -r requirements.txt
+        sudo pip3 install -r requirements.txt
         cd ..
         if command_exists blackbird; then
             echo "✅ blackbird installé avec succès."
@@ -243,7 +243,7 @@ install_gumshoe() {
             git clone https://github.com/asharbinkhalil/gumshoe.git
             cd gumshoe || exit 1
         fi
-        sudo pip install -r requirements.txt
+        sudo pip3 install -r requirements.txt
         cd ..
         if command_exists gumshoe; then
             echo "✅ gumshoe installé avec succès."
@@ -268,7 +268,7 @@ install_mailogleit() {
             git clone https://github.com/dincertekin/mailogleit.git
             cd mailogleit || exit 1
         fi
-        sudo pip install -r requirements.txt
+        sudo pip3 install -r requirements.txt
         cd ..
         if command_exists mailogleit; then
             echo "✅ mailogleit installé avec succès."
