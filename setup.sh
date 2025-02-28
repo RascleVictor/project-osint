@@ -44,7 +44,6 @@ install_holehe() {
     if command_exists holehe; then
         echo "✅ holehe est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "holehe" ]; then
             echo "⚠️ Le dossier 'holehe' existe déjà, mise à jour..."
             cd holehe || exit 1
@@ -69,10 +68,9 @@ install_hawker() {
     if command_exists hawker; then
         echo "✅ Hawker est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "Hawker" ]; then
             echo "⚠️ Le dossier 'Hawker' existe déjà, mise à jour..."
-            cd Hawker || exit 1
+            cd Hawker
             git pull
         else
          sudo git clone https://github.com/RetrO-M/Hawker.git
@@ -98,7 +96,6 @@ install_buster() {
     if command_exists buster; then
         echo "✅ buster est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "buster" ]; then
             echo "⚠️ Le dossier 'buster' existe déjà, mise à jour..."
             cd buster || exit 1
@@ -138,7 +135,6 @@ install_eyes() {
     if command_exists eyes; then
         echo "✅ Eyes est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "Eyes" ]; then
             echo "⚠️ Le dossier 'Eyes' existe déjà, mise à jour..."
             cd Eyes || exit 1
@@ -163,7 +159,6 @@ install_zehef() {
     if command_exists zehef; then
         echo "✅ Zehef est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "Zehef" ]; then
             echo "⚠️ Le dossier 'Zehef' existe déjà, mise à jour..."
             cd Zehef || exit 1
@@ -188,7 +183,6 @@ install_email_osint() {
     if command_exists email-osint; then
         echo "✅ Email-Osint est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "Email-Osint" ]; then
             echo "⚠️ Le dossier 'Email-Osint' existe déjà, mise à jour..."
             cd Email-Osint || exit 1
@@ -213,7 +207,6 @@ install_blackbird() {
     if command_exists blackbird; then
         echo "✅ blackbird est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "blackbird" ]; then
             echo "⚠️ Le dossier 'blackbird' existe déjà, mise à jour..."
             cd blackbird || exit 1
@@ -238,7 +231,6 @@ install_gumshoe() {
     if command_exists gumshoe; then
         echo "✅ gumshoe est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "gumshoe" ]; then
             echo "⚠️ Le dossier 'gumshoe' existe déjà, mise à jour..."
             cd gumshoe || exit 1
@@ -263,7 +255,6 @@ install_mailogleit() {
     if command_exists mailogleit; then
         echo "✅ mailogleit est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "mailogleit" ]; then
             echo "⚠️ Le dossier 'mailogleit' existe déjà, mise à jour..."
             cd mailogleit || exit 1
@@ -288,7 +279,6 @@ install_profil3r() {
     if command_exists Profil3r; then
         echo "✅ Profil3r est déjà installé."
     else
-        sudo apt install -y git
         if [ -d "Profil3r" ]; then
             echo "⚠️ Le dossier 'Profil3r' existe déjà, mise à jour..."
             cd Profil3r || exit 1
