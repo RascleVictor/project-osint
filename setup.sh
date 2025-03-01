@@ -51,9 +51,10 @@ install_holehe() {
         else
           sudo git clone https://github.com/megadose/holehe.git
             cd holehe || exit 1
+             sudo python3 setup.py install
+             cd ..
         fi
-        sudo python3 setup.py install
-        cd ..
+
         if command_exists holehe; then
             echo "✅ holehe installé avec succès."
         else
@@ -63,29 +64,30 @@ install_holehe() {
     fi
 }
 
-#install_hawker() {
-#    echo "⏳ Installation de Hawker..."
-#    if command_exists hawker; then
-#        echo "✅ Hawker est déjà installé."
-#    else
-#        if [ -d "Hawker" ]; then
-#            echo "⚠️ Le dossier 'Hawker' existe déjà, mise à jour..."
-#            cd Hawker
-#            git pull
-#        else
-#         sudo git clone https://github.com/RetrO-M/Hawker.git
-#            cd Hawker || exit 1
-#        fi
-#       sudo python3 -m pip install -r requirements.txt
-#        cd ..
-#        if command_exists hawker; then
-#            echo "✅ Hawker installé avec succès."
-#        else
-#            echo "❌ Échec de l'installation de Hawker."
-#            exit 1
-#        fi
-#    fi
-#}
+install_hawker() {
+    echo "⏳ Installation de Hawker..."
+    if command_exists hawker; then
+        echo "✅ Hawker est déjà installé."
+    else
+        if [ -d "Hawker" ]; then
+            echo "⚠️ Le dossier 'Hawker' existe déjà, mise à jour..."
+            cd Hawker
+            git pull
+        else
+         sudo git clone https://github.com/RetrO-M/Hawker.git
+            cd Hawker || exit 1
+            sudo python3 -m pip install -r requirements.txt
+            cd ..
+        fi
+
+        if command_exists hawker; then
+            echo "✅ Hawker installé avec succès."
+        else
+            echo "❌ Échec de l'installation de Hawker."
+            exit 1
+        fi
+    fi
+}
 
 #install_buster() {
 #    echo "⏳ Installation de buster..."
@@ -123,9 +125,10 @@ install_h8mail() {
             else
               sudo git clone https://github.com/khast3x/h8mail.git
                 cd h8mail|| exit 1
+                sudo python3 setup.py install
+               cd ..
             fi
-            sudo python3 setup.py install
-            cd ..
+
             if command_exists h8mail; then
                 echo "✅ h8mail installé avec succès."
             else
@@ -146,10 +149,11 @@ install_eyes() {
             git pull
         else
          sudo git clone https://github.com/N0rz3/Eyes.git
-            cd ./Eyes || exit 1
+            cd Eyes || exit 1
+            sudo python3 -m pip install -r requirements.txt
+             cd ..
         fi
-        sudo python3 -m pip install -r requirements.txt
-        cd ..
+
         if command_exists eyes; then
             echo "✅ Eyes installé avec succès."
         else
@@ -171,9 +175,9 @@ install_zehef() {
         else
            sudo git clone https://github.com/N0rz3/Zehef.git
             cd Zehef || exit 1
+            sudo python3 -m pip install -r requirements.txt
+            cd ..
         fi
-        sudo python3 -m pip install -r requirements.txt
-        cd ..
         if command_exists zehef; then
             echo "✅ Zehef installé avec succès."
         else
@@ -195,9 +199,9 @@ install_email_osint() {
         else
             git clone https://github.com/KanekiX2/Email-Osint.git
             cd Email-Osint || exit 1
+            sudo python3 -m pip install -r requirements.txt
+             cd ..
         fi
-        sudo python3 -m pip install -r requirements.txt
-        cd ..
         if command_exists email-osint; then
             echo "✅ Email-Osint installé avec succès."
         else
@@ -219,9 +223,10 @@ install_blackbird() {
         else
             git clone https://github.com/p1ngul1n0/blackbird
             cd blackbird || exit 1
+            sudo pip3 install -r requirements.txt
+            cd ..
         fi
-        sudo pip3 install -r requirements.txt
-        cd ..
+
         if command_exists blackbird; then
             echo "✅ blackbird installé avec succès."
         else
@@ -243,9 +248,10 @@ install_gumshoe() {
         else
             git clone https://github.com/asharbinkhalil/gumshoe.git
             cd gumshoe || exit 1
+            sudo pip3 install -r requirements.txt
+             cd ..
         fi
-        sudo pip3 install -r requirements.txt
-        cd ..
+
         if command_exists gumshoe; then
             echo "✅ gumshoe installé avec succès."
         else
@@ -267,9 +273,10 @@ install_mailogleit() {
         else
             git clone https://github.com/dincertekin/mailogleit.git
             cd mailogleit || exit 1
+            sudo pip3 install -r requirements.txt
+             cd ..
         fi
-        sudo pip3 install -r requirements.txt
-        cd ..
+
         if command_exists mailogleit; then
             echo "✅ mailogleit installé avec succès."
         else
@@ -291,10 +298,10 @@ install_profil3r() {
         else
             git clone https://github.com/Rog3rSm1th/Profil3r.git
             cd Profil3r || exit 1
+             sudo python3 setup.py install
+             cd ..
         fi
-        sudo pip3 install -r requirements.txt
-        sudo python3 setup.py install
-        cd ..
+
         if command_exists Profil3r; then
             echo "✅ Profil3r installé avec succès."
         else
