@@ -168,7 +168,6 @@ install_philint() {
         echo "✅ philINT est déjà installé."
     else
         [ -d "philINT" ] && (echo "⚠️ Le dossier 'philINT' existe déjà, mise à jour..." && cd philINT && git pull && cd ..) || (git clone https://github.com/ajuelosemmanuel/philINT.git && cd philINT && sudo python3 setup.py install && cd ..)
-
     fi
 }
 
