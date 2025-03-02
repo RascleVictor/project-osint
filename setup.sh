@@ -54,7 +54,7 @@ install_hawker() {
     if command_exists hawker; then
         echo "✅ Hawker est déjà installé."
     else
-        [ -d "Hawker" ] && (echo "⚠️ Le dossier 'Hawker' existe déjà, mise à jour..." && cd Hawker && git pull && cd ..) || (sudo git clone https://github.com/RetrO-M/Hawker.git && cd Hawker && sudo python3 -m pip install -r requirements.txt && cd ..)
+        [ -d "Hawker" ] && (echo "⚠️ Le dossier 'Hawker' existe déjà, mise à jour..." && cd Hawker && git pull && cd ..) || (sudo git clone https://github.com/RetrO-M/Hawker.git && cd Hawker &&  python3 -m pip install -r requirements.txt && cd ..)
         command_exists hawker && echo "✅ Hawker installé avec succès." || echo "❌ Échec de l'installation de Hawker."
     fi
 }
@@ -98,7 +98,7 @@ install_eyes() {
     if command_exists eyes; then
         echo "✅ Eyes est déjà installé."
     else
-        [ -d "Eyes" ] && (echo "⚠️ Le dossier 'Eyes' existe déjà, mise à jour..." && cd Eyes && git pull && cd ..) || (sudo git clone https://github.com/N0rz3/Eyes.git && cd Eyes && sudo python3 -m pip install -r requirements.txt && cd ..)
+        [ -d "Eyes" ] && (echo "⚠️ Le dossier 'Eyes' existe déjà, mise à jour..." && cd Eyes && git pull && cd ..) || (sudo git clone https://github.com/N0rz3/Eyes.git && cd Eyes &&  python3 -m pip install -r requirements.txt && cd ..)
         command_exists eyes && echo "✅ Eyes installé avec succès." || echo "❌ Échec de l'installation de Eyes."
     fi
 }
@@ -108,7 +108,7 @@ install_zehef() {
     if command_exists zehef; then
         echo "✅ Zehef est déjà installé."
     else
-        [ -d "Zehef" ] && (echo "⚠️ Le dossier 'Zehef' existe déjà, mise à jour..." && cd Zehef && git pull && cd ..) || (sudo git clone https://github.com/N0rz3/Zehef.git && cd Zehef && sudo python3 -m pip install -r requirements.txt && cd ..)
+        [ -d "Zehef" ] && (echo "⚠️ Le dossier 'Zehef' existe déjà, mise à jour..." && cd Zehef && git pull && cd ..) || (sudo git clone https://github.com/N0rz3/Zehef.git && cd Zehef &&  python3 -m pip install -r requirements.txt && cd ..)
         command_exists zehef && echo "✅ Zehef installé avec succès." || { echo "❌ Échec de l'installation de Zehef."; exit 1; }
     fi
 }
@@ -118,7 +118,7 @@ install_email_osint() {
     if command_exists email-osint; then
         echo "✅ Email-Osint est déjà installé."
     else
-        [ -d "Email-Osint" ] && (echo "⚠️ Le dossier 'Email-Osint' existe déjà, mise à jour..." && cd Email-Osint && git pull && cd ..) || (git clone https://github.com/KanekiX2/Email-Osint.git && cd Email-Osint && sudo python3 -m pip install -r requirements.txt && cd ..)
+        [ -d "Email-Osint" ] && (echo "⚠️ Le dossier 'Email-Osint' existe déjà, mise à jour..." && cd Email-Osint && git pull && cd ..) || (git clone https://github.com/KanekiX2/Email-Osint.git && cd Email-Osint && python3 -m pip install -r requirements.txt && cd ..)
         command_exists email-osint && echo "✅ Email-Osint installé avec succès." || { echo "❌ Échec de l'installation de Email-Osint."; exit 1; }
     fi
 }
@@ -128,7 +128,7 @@ install_blackbird() {
     if command_exists blackbird; then
         echo "✅ blackbird est déjà installé."
     else
-        [ -d "blackbird" ] && (echo "⚠️ Le dossier 'blackbird' existe déjà, mise à jour..." && cd blackbird && git pull && cd ..) || (git clone https://github.com/p1ngul1n0/blackbird && cd blackbird && sudo python3 -m pip install -r requirements.txt && cd ..)
+        [ -d "blackbird" ] && (echo "⚠️ Le dossier 'blackbird' existe déjà, mise à jour..." && cd blackbird && git pull && cd ..) || (git clone https://github.com/p1ngul1n0/blackbird && cd blackbird &&  python3 -m pip install -r requirements.txt && cd ..)
         command_exists blackbird && echo "✅ blackbird installé avec succès." || { echo "❌ Échec de l'installation de blackbird."; exit 1; }
     fi
 }
@@ -138,7 +138,7 @@ install_gumshoe() {
     if command_exists gumshoe; then
         echo "✅ gumshoe est déjà installé."
     else
-        [ -d "gumshoe" ] && (echo "⚠️ Le dossier 'gumshoe' existe déjà, mise à jour..." && cd gumshoe && git pull && cd ..) || (git clone https://github.com/asharbinkhalil/gumshoe.git && cd gumshoe && sudo python3 -m pip install -r requirements.txt && cd ..)
+        [ -d "gumshoe" ] && (echo "⚠️ Le dossier 'gumshoe' existe déjà, mise à jour..." && cd gumshoe && git pull && cd ..) || (git clone https://github.com/asharbinkhalil/gumshoe.git && cd gumshoe && python3 -m pip install -r requirements.txt && cd ..)
         command_exists gumshoe && echo "✅ gumshoe installé avec succès." || { echo "❌ Échec de l'installation de gumshoe."; exit 1; }
     fi
 }
@@ -148,7 +148,7 @@ install_mailogleit() {
     if command_exists mailogleit; then
         echo "✅ mailogleit est déjà installé."
     else
-        [ -d "mailogleit" ] && (echo "⚠️ Le dossier 'mailogleit' existe déjà, mise à jour..." && cd mailogleit && git pull && cd ..) || (git clone https://github.com/dincertekin/mailogleit.git && cd mailogleit && sudo python3 -m pip install -r requirements.txt && cd ..)
+        [ -d "mailogleit" ] && (echo "⚠️ Le dossier 'mailogleit' existe déjà, mise à jour..." && cd mailogleit && git pull && cd ..) || (git clone https://github.com/dincertekin/mailogleit.git && cd mailogleit &&  python3 -m pip install -r requirements.txt && cd ..)
         command_exists mailogleit && echo "✅ mailogleit installé avec succès." || { echo "❌ Échec de l'installation de mailogleit."; exit 1; }
     fi
 }
