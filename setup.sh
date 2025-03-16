@@ -20,7 +20,6 @@ declare -A repos=(
     [blackbird]="https://github.com/p1ngul1n0/blackbird.git"
     [gumshoe]="https://github.com/asharbinkhalil/gumshoe.git"
     [mailogleit]="https://github.com/dincertekin/mailogleit.git"
-    [Profil3r]="https://github.com/Rog3rSm1th/Profil3r.git"
     [philINT]="https://github.com/ajuelosemmanuel/philINT.git"
     [Mail-Hunter]="https://github.com/CYB3R-G0D/Mail-Hunter.git"
     [Elastichunt]="https://github.com/ef1500/Elastichunt.git"
@@ -41,7 +40,6 @@ declare -A repos=(
     [Mr.Holmes]="https://github.com/Lucksi/Mr.Holmes.git"
     [Moriarty-Project]="https://github.com/AzizKpln/Moriarty-Project.git"
     [GhostTrack]="https://github.com/HunxByts/GhostTrack.git"
-    [ClatScope]="https://github.com/Clats97/ClatScope.git"
 )
 
 for repo in "${!repos[@]}"; do
